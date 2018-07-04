@@ -1,0 +1,12 @@
+.avatar {
+  width: 330px;
+  height: 100px;
+  
+}
+
+
+
+img {
+  object-fit: cover;
+
+}

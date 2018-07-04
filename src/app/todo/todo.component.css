@@ -1,0 +1,68 @@
+.actionBar {
+  color: #000000;
+  font-size: 25px;
+  background: #4d95cf81;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 20px
+}
+
+.menu {
+  float: right;
+  font-size: 25px
+}
+
+.title {
+  border: none;
+  outline: none;
+  font-size: 26px;
+}
+
+.inputIcon {
+  font-size: 23px;
+  margin-top: 10px
+}
+
+.body {
+  padding: 15px;
+}
+
+.addInput {
+  background: #509fcc;
+  height: 40px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  padding-left:5px;
+  padding-bottom:4px; 
+}
+
+.addInput::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 22px;
+
+}
+.anticon-plus{
+  margin-top:10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.addTask{
+  margin-top: 15px;
+  border-radius: 5px;
+  background: #509fcc;
+}
+
+.anticon-check-circle{
+  margin-top:12px;
+  font-size: 20px
+}
+
+.taskItem{
+  margin: 15px;
+}
+
+nz-date-picker{
+  background: #00000000
+}

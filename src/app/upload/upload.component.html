@@ -1,0 +1,13 @@
+<div class="clearfix">
+  <nz-upload nzAction="https://localhost:8080"
+   nzListType="picture-card"
+    [nzShowButton]="true"
+     [nzBeforeUpload]="beforeUpload"
+     [nzPreview]="handlePreview" [nzShowUploadList]="false">
+    <ng-container *ngIf="!todo.img">
+      <i class="anticon anticon-plus"></i>
+      <div class="ant-upload-text">上传</div>
+    </ng-container>
+    <img *ngIf="todo.img" [src]="todo.img" class="avatar">
+  </nz-upload>
+</div>

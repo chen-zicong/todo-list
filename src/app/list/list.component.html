@@ -1,0 +1,52 @@
+<div *ngFor="let item of data" style="margin: 20px 5px">
+
+  <nz-card nzHoverable [nzCover]="coverTemplate" [nzActions]="[actionSetting,actionEdit]">
+    <nz-card-meta (click)="onSelect(item)" [nzTitle]="title" [nzDescription]="status"></nz-card-meta>
+  </nz-card>
+  <ng-template #coverTemplate >
+  
+      <img alt="example" [src]="item.img" *ngIf="item.img;else elseBlock" />
+      <ng-template #elseBlock>
+        <img src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" alt="">
+      </ng-template>
+
+  </ng-template>
+  <ng-template #title>
+    <h3 [style.text-decoration]="item.isCheck ? 'line-through' : 'none' " class="title">
+      {{item.title}}
+    </h3>
+  </ng-template>
+  <ng-template #status >
+<div nz-row>
+
+
+    <h4 nz-col nzSpan="20">
+      {{ item.date | date: "y-MM-dd H:m:s" }}
+    </h4>
+
+    <div class="status" [ngSwitch]="item.status" nz-col nzSpan="4">
+   <span *ngSwitchCase="0">
+      </span>
+      <span *ngSwitchCase="1">
+        <i class="anticon anticon-smile"></i>
+      </span>
+      <span *ngSwitchCase="2">
+        <i class="anticon anticon-meh"></i>
+      </span>
+      <span *ngSwitchCase="3">
+        <i class="anticon anticon-frown"></i>
+      </span>
+    </div>
+  </div>
+
+  </ng-template>
+  <ng-template #actionSetting>
+    <!-- <i (click)="createBasicMessage(item.id)" class="anticon anticon-check-circle"></i> -->
+    <nz-switch [ngModel]="item.isCheck" (click)="createBasicMessage(item.id)" nzCheckedChildren="搞定" nzUnCheckedChildren="待办"></nz-switch>
+  </ng-template>
+  <ng-template #actionEdit>
+    <i class="anticon anticon-close-circle" (click)="deleteMessage(item.id)"></i>
+  </ng-template>
+
+
+</div>

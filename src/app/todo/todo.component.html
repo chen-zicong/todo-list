@@ -1,0 +1,36 @@
+<div class="actionBar">
+  <span (click)="back()">
+    <i class="anticon anticon-left"></i>
+    TODOS
+  </span>
+  <span class="menu">
+    <i class="anticon anticon-ellipsis "></i>
+  </span>
+</div>
+<div class="body">
+
+  <app-upload [todo]="todo"></app-upload>
+  <div nz-row class="title" nzGutter="8">
+    <i class="anticon anticon-profile inputIcon" nz-col nzSpan="2"></i>
+    <input class="title" nz-col nzSpan="22" type="text" [(ngModel)]="todo.title" placeholder="input title">
+  </div>
+
+
+  <div class="addTask" nz-row>
+    <i nz-col nzSpan="2" class="anticon anticon-plus"></i>
+    <input class="addInput" type="text" nz-col nzSpan="20" placeholder="添加步骤..." [(ngModel)]="taskValue">
+    <i nz-col nzSpan="2" class="anticon anticon-check-circle" *ngIf="taskValue" (click)="addTaskItem()"></i>
+  </div>
+
+  <div class="taskItem">
+    <nz-steps nzDirection="vertical">
+      <nz-step [nzTitle]="task" nzDescription='' *ngFor="let task of todo.item"></nz-step>
+
+    </nz-steps>
+  </div>
+  <app-save [todo]="todo"></app-save>
+  <app-status [todo]="todo"></app-status>
+  <nz-date-picker [(ngModel)]="todo.date" (ngModelChange)="onChange($event)" nzShowTime></nz-date-picker>
+
+
+</div>

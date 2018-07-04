@@ -1,0 +1,5 @@
+{
+  "/":{
+    "target":"https://jsonplaceholder.typicode.com/posts"
+  }
+}

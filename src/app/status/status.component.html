@@ -1,0 +1,44 @@
+<!-- <div nz-row nzType="flex" nzJustify="start" class="status">
+  <div nz-col nzSpan="2">
+    <div class="red"></div>
+  </div>
+  <div nz-col nzSpan="2">
+    <div class="yello"></div>
+  </div>
+  <div nz-col nzSpan="2">
+    <div class="green"></div>
+  </div>
+</div> -->
+
+
+<div class="status">
+
+  <nz-dropdown [nzPlacement]="'topCenter'">
+    <button nz-button nz-dropdown nzType="dashed" [ngSwitch]="todo.status" nzSize="large">
+
+      <span *ngSwitchCase="0">
+        <i class="anticon anticon-exclamation-circle-o"></i>判定级别 </span> 
+      <span *ngSwitchCase="1">
+          <i class="anticon anticon-smile"></i>稳得一批</span>      
+      <span *ngSwitchCase="2">
+        <i class="anticon anticon-meh"></i>有点慌吼</span>
+      <span *ngSwitchCase="3">
+        <i class="anticon anticon-frown"></i>十万火急</span>
+    </button>
+
+    <ul nz-menu>
+      <li nz-menu-item nz-row>
+        <span (click)="setStatus(3)">
+          <i class="anticon anticon-frown"></i>十万火急</span>
+      </li>
+      <li nz-menu-item>
+        <span (click)="setStatus(2)">
+          <i class="anticon anticon-meh"></i>有点慌吼</span>
+      </li>
+      <li nz-menu-item>
+        <span (click)="setStatus(1)">
+          <i class="anticon anticon-smile"></i>稳得一批</span>
+      </li>
+    </ul>
+  </nz-dropdown>
+</div>

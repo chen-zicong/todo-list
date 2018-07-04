@@ -1,0 +1,31 @@
+
+
+.status {
+  margin-right: 20px;
+  position: fixed;
+  left: 20px;
+  bottom: 3%;
+}
+
+.anticon-frown {
+  color: #f33f3f;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.anticon-meh {
+  color: #c9f049;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.anticon-smile {
+  color: #47e07a;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.anticon-exclamation-circle-o{
+  font-size: 20px;
+  margin-right: 10px;
+}

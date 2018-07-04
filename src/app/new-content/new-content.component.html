@@ -1,0 +1,11 @@
+<div class="content">
+<br>
+  <input nz-input placeholder="标题">
+  <div class="input">
+    <textarea nz-input [nzAutosize]="{ minRows: 5, maxRows: 25 }"></textarea>
+  </div>
+  <div nz-row > 
+    <button nz-button nzType='primary'>保存</button>
+    <nz-date-picker class="picker" [(ngModel)]="date" (ngModelChange)="onChange($event)" nzShowTime></nz-date-picker>
+  </div>
+</div>
